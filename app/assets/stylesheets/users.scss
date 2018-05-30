@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Caveat:700');
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+.wrapper {
+  background-image: url("nightsky.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main {
+  height: 100vh;
+  background-image: none !important;
+  background-color: #ffffff !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title-container {
+  height: 90vh;
+  background: url("img/bg.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.title-container__title {
+  font-size: 50px;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-family: 'Roboto Slab', serif;
+}
+
+.title-container__subtitle {
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+}
+
+.form-container {
+  background-color: #2c3e50;
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.header_main {
+  width: 100%;
+  height: 10vh;
+  color: #000000 !important;
+  display: flex;
+  position: fixed;
+}
+
+.header_main_logo {
+  padding-top: 5px;
+  padding-left: 5vw;
+  font-family: 'Abel', sans-serif;
+  position: absolute;
+
+
+}
+
+.header_main_profile_info {
+  font-family: 'Poiret One', sans-serif;
+  padding-top: 1vh;
+  padding-right: 5vw;
+  right: 13vw;
+  position: absolute;
+
+}
+
+.main_info{
+  top: 10vh;
+  position: absolute !important;
+  height: 50vh;
+  width: inherit;
+  overflow: hidden;
+  display: flex;
+}
+
+.split {
+  height: inherit;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+
+}
+
+/* Control the left side */
+.left {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+
+#with_gradient{
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(-135deg, #ff5694, #8f93ff);
+  opacity: 0.8;
+  z-index: 1;
+
+}
+
+.left #profile_info_left h3 {
+  font-size: 3rem;
+  font-family: 'Caveat', cursive;
+
+}
+  .left #profile_info_left{
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50vh;
+    z-index: 2;
+  opacity: 1;
+  color: #fffbf9;
+  font-family: 'Abel', sans-serif;
+}
+
+.left #profile_img_left{
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  background-image: url("profile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vh;
+  opacity: 1 !important;
+}
+/* Control the right side */
+.right {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+
+}
+.additional_block{
+  display: flex;
+  width: inherit;
+  height: 25vh;
+  background-color: #c82333;
+}
+
+.dropdown{
+  top: 0vh;
+  right: 0.2vw !important;
+  position: absolute !important;
+}
+.dropdown-menu{
+  left: -100px !important;
+}
+
+.header_main_profile_info #dropdownMenuButton{
+  box-shadow: transparent !important;
+  color: transparent !important;
+  background-color: transparent;
+  border-color:  transparent;
+
+}
+
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #f16051;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+input[type="text"] {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+  -webkit-text-fill-color: #fff !important;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #f16051;
+  color: #fff;
+  font-weight: 100;
+}
+
+button:active {
+  outline: none;
+}
+

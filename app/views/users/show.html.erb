@@ -1,0 +1,45 @@
+<div>
+  <div class="wrapper">
+    <div class="main">
+      <%= render "header" %>
+      <div class="main_info" >
+        <div class="split left">
+          <div id="profile_img_left">
+          <div class="centered" id="with_gradient">
+          </div>
+            <div id="profile_info_left">
+              <h4>Your name is</h4>
+              <h3><%= @profile.name %></h3>
+              <h4>Your surname is</h4>
+              <h3><%= @profile.surname %></h3>
+              <h4>Your nickname is</h4>
+              <h3><%= @profile.nickname %></h3>
+              <h4>Your email is</h4>
+              <h3><%= @profile.email %></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="split right">
+          <div class="centered">
+            <h2 style="text-align: center">Ваши кошельки</h2>
+            <% if !@profile.wallets.empty? %>
+          <% @wallets.each do |wallet| %>
+
+              <% end %>
+              <% end %>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="additional_block">
+
+      </div>
+      <div class="container">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

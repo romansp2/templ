@@ -1,0 +1,17 @@
+{
+  "name": "untitled",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "4.1.1",
+    "gulp-sass": "^4.0.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react_ujs": "^2.4.4"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

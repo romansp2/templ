@@ -1,0 +1,28 @@
+<div>
+  <div class="wrapper">
+    <div class="main">
+      <div class="header_main">
+        <h1 class="header_main_logo">Roman ETH Wallet</h1>
+        <div class="header_main_profile_info" >
+          <h3><%= @profile.nickname %></h3>
+          <div class="dropdown">
+            <%= image_submit_tag("businessman.png", alt: @profile.nickname,
+                                 width: "65px", height: "auto",
+                                 class: "btn btn-secondary dropdown-toggle", id: "dropdownMenuButton",
+                                 data: {toggle: "dropdown"}, aria: {haspopup: true}, aria: {expanded: false}) %>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to 'Профиль',user_path(@profile), class: "dropdown-item" %>
+              <a class="dropdown-item" href="#">Баланс</a>
+              <a class="dropdown-item" href="">Заказы</a>
+              <a class="dropdown-item" href="">Выйти</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
