@@ -8,13 +8,13 @@
           <div class="centered" id="with_gradient">
           </div>
             <div id="profile_info_left">
-              <h4>Your name is</h4>
+              <h4>Ваше имя</h4>
               <h3><%= @profile.name %></h3>
-              <h4>Your surname is</h4>
+              <h4>Ваша фамилия</h4>
               <h3><%= @profile.surname %></h3>
-              <h4>Your nickname is</h4>
+              <h4>Ваш никнейм</h4>
               <h3><%= @profile.nickname %></h3>
-              <h4>Your email is</h4>
+              <h4>Ваша электронная почта</h4>
               <h3><%= @profile.email %></h3>
             </div>
           </div>
@@ -27,19 +27,47 @@
           <% @wallets.each do |wallet| %>
 
               <% end %>
+
+              <% else %>
+            <div id="AddWallet">
+
+              <button type="button" id="addwalletbutton" data-toggle="modal" data-target="#AddWalletModal">
+              </button>
+              <h4 id="AddWalletText">На данный момент у вас не создано ни одного кошелька</h4>
+              </div>
+
               <% end %>
 
           </div>
         </div>
 
       </div>
-      <div class="additional_block">
 
-      </div>
       <div class="container">
 
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="AddWalletModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Новый ETH кошелек</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 id="AddWalletModalText">Введите пароль</h4>
+        <%= password_field_tag 'password',nil, class: "AddWalletPassword",placeholder: "Надежный и запоминающийся" %>
+        <h5 id="AddWalletModalText" style="font-size: 1rem !important;color: #222227 !important;padding-top: 100px">
+          Этот пароль шифрует ваш закрытый ключ. Он не является корнем для генерации ваших ключей.
+          Вам понадобится этот пароль + ваш секретный ключ, чтобы разблокировать ваш кошелек.</h5>
+          <%= link_to "Далее", , remote: true, method: :post %>
+      </div>
+
     </div>
   </div>
 </div>

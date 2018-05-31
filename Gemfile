@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'react-rails'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.0.0'
+gem 'eth'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

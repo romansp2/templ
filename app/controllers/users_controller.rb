@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   def show
     @profile = User.find(1)
     @wallets = @profile.wallets
+    @wallet = Wallet.new
+
   end
 
   def edit
