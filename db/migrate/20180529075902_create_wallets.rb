@@ -5,7 +5,7 @@ class CreateWallets < ActiveRecord::Migration[5.1]
       t.string :public_key
       t.string :address
       t.integer :user_id
-      t.integer :password
+      t.string :password
       t.timestamps
     end
   end
