@@ -9,10 +9,10 @@ class UsersController < ApplicationController
     @profile = User.find(1)
     @wallets = @profile.wallets
     @wallet = Wallet.new
-
   end
 
   def edit
+
   end
 
   def update

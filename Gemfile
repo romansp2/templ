@@ -24,6 +24,9 @@ gem 'react-rails'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.0.0'
 gem 'eth'
+gem 'ethereum.rb'
+gem 'bcrypt'
+gem 'client_side_validations'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,8 +1,4 @@
-<div>
-  <div class="wrapper">
-    <div class="main">
-      <%= render "header" %>
-      <div class="main_info" >
+ <div class="main_info" >
         <div class="split left">
           <div id="profile_img_left">
           <div class="centered" id="with_gradient">
@@ -24,10 +20,24 @@
           <div class="centered">
             <h2 style="text-align: center">Ваши кошельки</h2>
             <% if !@profile.wallets.empty? %>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>Адресс</th>
+                  <th>Баланс</th>
+                  <th>Последняя транзакция</th>
+                </tr>
+                </thead>
+                <tbody>
           <% @wallets.each do |wallet| %>
-
+                  <tr>
+                    <td><%= wallet.balance %></td>
+                    <td>Баланс</td>
+                    <td>Последняя транзакция</td>
+                  </tr>
               <% end %>
-
+                </tbody>
+              </table>
               <% else %>
             <div id="AddWallet">
 
@@ -47,9 +57,7 @@
 
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
 <div class="modal fade" id="AddWalletModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -60,8 +68,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= form_with model: @wallet do |form| %>        <h4 id="AddWalletModalText">Введите пароль</h4>
-        <%= password_field_tag 'password',nil, class: "AddWalletPassword",placeholder: "Надежный и запоминающийся" %>
+        <%= form_with(model: [@profile, Wallet.new], validate: true ) do |form| %>
+          <h4 id="AddWalletModalText">Введите пароль</h4>
+        <%= password_field_tag 'password',nil, class: "AddWalletPassword",placeholder: "Надежный и запоминающийся", validate: { length: { minimum: 8 } }%>
           <%= submit_tag 'Создать' %>
         <h5 id="AddWalletModalText" style="font-size: 1rem !important;color: #222227 !important;padding-top: 100px">
           Этот пароль шифрует ваш закрытый ключ. Он не является корнем для генерации ваших ключей.

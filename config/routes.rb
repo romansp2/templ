@@ -6,8 +6,6 @@ Rails.application.routes.draw do
    resources :wallets
  end
 
- resources :wallets
-
 
  root 'home#index'
 
