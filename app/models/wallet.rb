@@ -1,7 +1,8 @@
 
 require 'bcrypt'
 require 'eth'
-
+require 'net/http'
+require 'json'
 
 class Wallet < ApplicationRecord
 
@@ -18,11 +19,13 @@ class Wallet < ApplicationRecord
     self.user_id = 1
   end
 
-  def balance
-    client = Ethereum::Singleton.instance
+
+  def get_address
+    self.address.to_s.first(4)+"..."+self.address.to_s.last(3)
   end
 
   private
+
   def generate_keys
     key = Eth::Key.new
     self.private_key = key.private_hex

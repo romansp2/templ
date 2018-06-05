@@ -158,7 +158,6 @@ body {
 }
 /* Control the right side */
 .right {
-  overflow: hidden;
   position: absolute;
   right: 0;
 
@@ -176,6 +175,21 @@ body {
   margin-top: 25px;
   text-align: center;
   width: 100%;
+}
+
+#AddWalletButtonExist{
+  width: 5vw;
+  height: 5vh;
+  display: block;
+  position: absolute;
+  left: 0.5vw;
+  top: 0;
+  background-image: url("wallet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent !important;
+  background-size: 4vh;
+
 }
 
 #addwalletbutton {

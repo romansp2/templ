@@ -1,4 +1,6 @@
 class WalletsController < ApplicationController
+  helper_method WalletsHelper
+  include WalletsHelper
   def index
   end
 
@@ -19,6 +21,10 @@ class WalletsController < ApplicationController
   end
 
   def show
+    init_web3
+    @profile = User.find(1)
+    @wallet = Wallet.find(params[:id])
+    @transactions = get_transactions @wallet.address
 
   end
 

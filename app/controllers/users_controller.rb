@@ -1,23 +1,13 @@
 class UsersController < ApplicationController
-  def new
-  end
-
-  def create
-  end
+  helper_method WalletsHelper
+  include WalletsHelper
 
   def show
+    init_web3
     @profile = User.find(1)
     @wallets = @profile.wallets
     @wallet = Wallet.new
-  end
-
-  def edit
 
   end
 
-  def update
-  end
-
-  def destroy
-  end
 end

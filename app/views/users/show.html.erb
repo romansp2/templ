@@ -19,6 +19,8 @@
         <div class="split right">
           <div class="centered">
             <h2 style="text-align: center">Ваши кошельки</h2>
+            <button type="button" id="AddWalletButtonExist" title="Добавить кошелек" data-toggle="modal" data-target="#AddWalletModal">
+            </button>
             <% if !@profile.wallets.empty? %>
               <table class="table table-striped">
                 <thead>
@@ -26,14 +28,15 @@
                   <th>Адресс</th>
                   <th>Баланс</th>
                   <th>Последняя транзакция</th>
+                  <th></th>
                 </tr>
                 </thead>
                 <tbody>
           <% @wallets.each do |wallet| %>
                   <tr>
-                    <td><%= wallet.balance %></td>
-                    <td>Баланс</td>
-                    <td>Последняя транзакция</td>
+                    <td><%= link_to wallet.get_address,user_wallet_path(@profile,wallet), title: wallet.address %></td>
+                    <td><%= balance wallet.address %></td>
+                    <td><%= last_trans wallet.address %></td>
                   </tr>
               <% end %>
                 </tbody>

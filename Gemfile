@@ -26,6 +26,8 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'eth'
 gem 'ethereum.rb'
 gem 'bcrypt'
+gem 'web3-eth'
+gem 'ethereum', '~> 0.2.0'
 gem 'client_side_validations'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
